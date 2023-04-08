@@ -6,6 +6,7 @@ import { Col } from 'react-bootstrap'
 import Carousels from './Carousels'
 
 
+
 function Traveling() {
   //state to hold data from api
   var [placeList, setPlaces] = useState([])
@@ -32,7 +33,19 @@ function Traveling() {
           <h1 className='text-center'>Let us plan you a
             perfect </h1><h1 className='text-center text-warning'>India Holiday</h1>
           <h5 className='text-center'>Personalised, well-crafted tour packages for best experiences</h5>
-        
+          <Row className='pt-4 '>
+            <Col className='ps-5'>
+            <h5>Trecking</h5>
+            <img src='https://i.postimg.cc/wjKKmdds/india-holiday-trekking.webp'></img>
+            </Col>
+            <Col className='ps-1'>
+            <h5>Wild life</h5>
+            <img src='https://i.postimg.cc/3NpsLLXw/india-holiday-wildlife.webp'></img></Col>
+            <Col>
+            <h5>Heritage</h5>
+            <img src='https://i.postimg.cc/9frN88Vj/india-holiday-heritage.webp'></img>
+            </Col>
+          </Row>
       </Col>
         
       </Row>

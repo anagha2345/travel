@@ -1,27 +1,38 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
-
+import Button from 'react-bootstrap/Button';
+import Collapse from 'react-bootstrap/Collapse';
 
 function Themes({ highlights }) {
-
+  const [open, setOpen] = useState(false);
 
   return (
+    
     <div className='text-center container '>
 
-      <h4>Highlights</h4>
-      <Row className='ps-5 '>
-        
-          {
-            highlights.map(item => (
-              <Col lg={4} className=''>
-              <h4>{item.name}</h4>
-              <img src={item.image} className='w-100' style={{height:'250px'}}></img>
-              <p>{item.Details}</p>
-                </Col>
-            ))
-          }
-        </Row>
+<Button className='rounded-pill bg-primary'
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+       Explore more
+      </Button>
+     <Collapse in={open}>
+       <div id="example-collapse-text">
+       <Row>   { 
+          highlights.map(item=>(
+            
+            <Col lg={4} >
+              <h5>{item.name}</h5>
+            <img style={{height:'300px'}} src={item.image}></img>
+            <p>{item.Details}</p>
+            </Col>
+           
+          ))
+         }</Row>
+        </div> 
+      </Collapse>
     </div>
   )
 }

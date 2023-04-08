@@ -8,6 +8,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Moredetails from './Moredetails';
 import './Hview.css'
 import Themes from './Themes';
+import Incl from './Incl';
 
 function Hview() {
   var [Allhotels, setData] = useState([])
@@ -39,33 +40,15 @@ function Hview() {
               <ListGroup variant="flush">
                 <ListGroup.Item><h2>{tplace.place}</h2></ListGroup.Item>
                 <ListGroup.Item><p>{tplace.title}</p></ListGroup.Item>
-                <ListGroup.Item>
-                  <h5>Inclusions</h5>
-                  <Row>
-                  <Col>
-                      <img src='https://i.postimg.cc/QMYSxN1C/3-star.png'></img>
-                      <p>Meals</p>
-                    </Col>
-                    <Col>
-                      <img src='https://i.postimg.cc/QMYSxN1C/3-star.png'></img>
-                      <p>Accommodation</p>
-                    </Col>
-                    <Col>
-                      <img src='https://i.postimg.cc/QMYSxN1C/3-star.png'></img>
-                      <p>Transportation</p>
-                    </Col>
-                    <Col>
-                      <img src='https://i.postimg.cc/QMYSxN1C/3-star.png'></img>
-                      <p>Sightseeing</p></Col>
 
-
-                  </Row>
-                </ListGroup.Item>
 
                 <ListGroup.Item>
                   <Moredetails moreData={tplace}></Moredetails>
                 </ListGroup.Item>
+                <ListGroup.Item>
+                  <Incl></Incl>
 
+                </ListGroup.Item>
 
                 {/* <ListGroup.Item>
                   <Highlights bestTime={tplace.itinerary} />
@@ -75,7 +58,7 @@ function Hview() {
 
             </Col>
           </Row>
-          <Row className='ps-5'>
+          <Row className='ps-5 pe-5'>
             <Themes highlights={tplace.Highlights}></Themes>
           </Row>
 
