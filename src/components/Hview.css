@@ -1,0 +1,8 @@
+#anm{transition: .5s ease-in-out;
+
+}
+#anm:hover{
+   
+       transform: scale(1.02);
+     
+}
